@@ -1,0 +1,37 @@
+<html>
+
+  <head>
+    <title>Login</title>
+    <script>
+        function processar() {
+            var email = document.getElementById("Input").value
+            var senha = document.getElementById("Input2").value
+
+            if (email.indexOf('@') === -1){
+                document.getElementById("resultado").innerHTML = "Insira um email válido."
+            } else {
+                document.getElementById("resultado").innerHTML = "Usuário encontrado, bem vindo(a)!"
+            }
+
+        document.getElementById("Input").value = ""
+        document.getElementById("Input2").value = ""
+
+        }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Área de Login</h1>
+    <p>Preencha os campos para realizar o login.</p>
+    <input id="Input" type="email">
+    <input id="Input2" type="password">
+    <button id="Botao" onclick="processar()">Login</button>
+    <div id="resultado">Aguardando o preenchimento dos campos:</div>
+  </body>
+</html>
+
+
+<!-- 1 consulta <consulta em codigo salvo no GirHub> -->
+<!-- 2 consulta no chatgpt <codeReview> -->
+<!-- 3 consulta no chatgpt <Como eu coloco uma verificação se o email possui o @?> -->

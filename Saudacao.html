@@ -1,0 +1,48 @@
+<html>
+
+  <head>
+    <title>Saudaçâo</title>
+    <script>
+        function processar(){
+            var nome = (document.getElementById("Input").value)
+            var hora = (document.getElementById("Input2").value)
+
+            if (nome === "" || hora === "") {
+                alert("Complete os campos.")
+                return
+            }
+
+            var horaNumero = parseInt(hora.split(":")[0])
+
+            if (horaNumero < 12) {
+                document.getElementById("resultado").innerHTML = "Bom dia, " + (nome) + "!"
+
+            } else if (horaNumero < 18) {
+                document.getElementById("resultado").innerHTML = "Boa tarde, " + (nome) + "!"
+            
+            } else {
+                document.getElementById("resultado").innerHTML = "Boa noite, " + (nome) + "!"
+            }
+            
+
+        }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Registro de visita.</h1>
+    <p>Informe seu nome e horário de visita.</p>
+    <input id="Input" type="text">
+    <input id="Input2" type="time">
+    <button id="Botao" onclick="processar()">Exibir</button>
+    <div id="resultado">Seu registro aparecerá aqui:</div>
+  </body>
+</html>
+
+<!-- 1 consulta no chatgpt <codeReview> -->
+<!-- 2 consulta <codeReview + Agora, sem me dar a resposta, me explique como eu coloco recados personalizados como 'Bom dia, Boa tarde e Boa noite' de acordo com o horario que o usuario digitar> -->
+<!-- 3 consulta <codeReview> -->
+<!-- 4 consulta <codeReview + me explique essa parte:  var horaNumero = parseInt(hora.split(":")[0])> -->
+<!-- 5 consulta <codeReview> -->
+<!-- 6 consulta <codeReview> -->

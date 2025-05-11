@@ -9,6 +9,10 @@
             document.getElementById("resultado").innerHTML = "Seu número de cliques é de: " + (contador)
 
         }
+        function remover(){
+            contador = 0
+            document.getElementById("resultado").innerHTML = "Cliques removidos."
+        }
     </script>
   </head>
 
@@ -16,6 +20,7 @@
     <h1>Contar cliques.</h1>
     <p>Clique no botão para contar.</p>
     <button id="Botao" onclick="processar()">CLIQUE</button>
+    <button id="Botao2" onclick="remover()">REMOVER</button>
     <div id="resultado">Seus cliques aparecedram aqui:</div>
   </body>
 

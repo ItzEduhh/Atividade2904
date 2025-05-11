@@ -9,9 +9,15 @@
 
             if (email.indexOf('@') === -1){
                 document.getElementById("resultado").innerHTML = "Insira um email válido."
-            } else {
-                document.getElementById("resultado").innerHTML = "Usuário encontrado, bem vindo(a)!"
+                return;
             }
+            if (senha != "12345") {
+              document.getElementById("resultado").innerHTML = "Insira uma senha válida."
+              return;
+            }
+            
+            document.getElementById("resultado").innerHTML = "Usuário encontrado, bem vindo(a)!"
+            
 
         document.getElementById("Input").value = ""
         document.getElementById("Input2").value = ""
@@ -24,8 +30,8 @@
   <body>
     <h1>Área de Login</h1>
     <p>Preencha os campos para realizar o login.</p>
-    <input id="Input" type="email">
-    <input id="Input2" type="password">
+    <input id="Input" type="email" placeholder="e-mail">
+    <input id="Input2" type="password" placeholder="Senha">
     <button id="Botao" onclick="processar()">Login</button>
     <div id="resultado">Aguardando o preenchimento dos campos:</div>
   </body>
